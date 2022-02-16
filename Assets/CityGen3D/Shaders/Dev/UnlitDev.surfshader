@@ -1,0 +1,36 @@
+﻿// unlit shader with alpha cutoff for rendering icons
+BEGIN_OPTIONS
+    ShaderName "CityGen3D/UnlitDev"
+    Stackable "False"
+    Queue "Transparent"
+	Alpha "Blend"
+	Workflow "Unlit"
+END_OPTIONS
+
+BEGIN_PROPERTIES
+	[NoScaleOffset]_MainTex ("Albedo", 2D) = "white" {}
+	_Color ("Color", Color) = (1, 1, 1, 1)
+	_Cutoff("Alpha Cutoff", Range(0,1)) = 0.5
+END_PROPERTIES
+
+BEGIN_CBUFFER
+	half4 _Color;
+    half _Cutoff;
+END_CBUFFER
+
+BEGIN_CODE
+
+    sampler2D _MainTex;
+   
+	void SurfaceFunction(inout Surface o, ShaderData d)
+	{
+		half4 c = tex2D(_MainTex, d.texcoord0.xy);
+	  
+        o.Albedo = c.rgb * _Color.rgb;
+		o.Alpha = c.a;
+		
+		clip( o.Alpha - _Cutoff );
+	}
+
+END_CODE
+

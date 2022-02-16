@@ -1,0 +1,32 @@
+﻿
+BEGIN_OPTIONS
+	ShaderName "CityGen3D/FacadeSimpleDev"
+	Fallback "Diffuse" 	
+END_OPTIONS
+
+BEGIN_PROPERTIES
+   [NoScaleOffset]_Albedo ("Albedo", 2D) = "white" {}
+   [Normal][NoScaleOffset]_Normal ("Normal", 2D) = "bump" {}
+   [NoScaleOffset]_Metallic("Metallic", 2D) = "black" {}
+   [NoScaleOffset]_Smoothness("Smoothness", 2D) = "black" {}
+END_PROPERTIES
+
+BEGIN_CODE
+
+   sampler2D _Albedo;
+   sampler2D _Normal;
+   sampler2D _Metallic;
+   sampler2D _Smoothness;
+
+   void SurfaceFunction(inout Surface o, ShaderData d)
+   {
+      half4 c = tex2D(_Albedo, d.texcoord0.xy);
+      o.Albedo = c.rgb;
+      o.Alpha = c.a;
+      o.Normal = UnpackNormal(tex2D(_Normal, d.texcoord0.xy));
+      o.Metallic = tex2D(_Metallic, d.texcoord0.xy);
+      o.Smoothness = tex2D(_Smoothness, d.texcoord0.xy);
+   }
+
+END_CODE
+

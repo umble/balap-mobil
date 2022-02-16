@@ -1,0 +1,34 @@
+﻿
+BEGIN_OPTIONS
+   ShaderName "CityGen3D/TerrainDev"
+   Fallback "Diffuse"
+END_OPTIONS
+
+
+BEGIN_PROPERTIES
+   _MainTex ("Albedo", 2D) = "white" {}
+   [Normal][NoScaleOffset]_BumpMap ("Normal", 2D) = "bump" {}
+END_PROPERTIES
+
+BEGIN_CBUFFER
+   float4 _MainTex_ST;
+END_CBUFFER
+
+BEGIN_CODE
+
+   TEXTURE2D(_MainTex);
+   SAMPLER(sampler_MainTex);   // naming this way associates it with the sampler properties from the albedo map
+   TEXTURE2D(_BumpMap);
+
+   void SurfaceFunction(inout Surface o, ShaderData d)
+   {
+      float2 uv = d.texcoord0.xy * _MainTex_ST.xy + _MainTex_ST.zw;
+
+      half4 c = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, uv);
+      o.Albedo = c.rgb;
+      o.Height = c.a;
+      o.Normal = UnpackScaleNormal(SAMPLE_TEXTURE2D(_BumpMap, sampler_MainTex, uv), 1.0);
+   }
+
+END_CODE
+

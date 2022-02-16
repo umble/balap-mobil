@@ -1,0 +1,70 @@
+﻿
+BEGIN_OPTIONS
+   ShaderName "CityGen3D/FacadeDev"
+   Fallback "CityGen3D/FacadeSimple"
+   Tessellation "Distance"
+END_OPTIONS
+
+BEGIN_PROPERTIES
+   [NoScaleOffset]_Albedo ("Albedo", 2D) = "white" {}
+   [Normal][NoScaleOffset]_Normal ("Normal", 2D) = "bump" {}
+   [NoScaleOffset]_Height ("Height Map", 2D) = "black" {}
+   [NoScaleOffset]_Metallic("Metallic", 2D) = "black" {}
+   [NoScaleOffset]_Smoothness("Smoothness", 2D) = "black" {}
+   _DisplacementAmount("Displacement Amount", Range(0,2)) = 0.2
+   _DisplacementMipBias("Displacement Mip Bias", Range(0,6)) = 4
+   [Vec2]_DisplacementDefaultLocation("Displacement Default Location", Vector) = (0,0,0,0) // safe sample location of height texture when we are within _DisplacementEdgeThickness of texture on the atlas (prevents cracks between different textures on the atlas)
+   _DisplacementEdgeThickness("Displacement Edge Thickness", Range(0,1)) = 0.0005 // how large is the buffer between different textures on an atlas where we use _DisplacementEdgeHeight instead of sampling height texture?
+   _TessSubdiv("Tessellation Subdivisions", Range(2, 24)) = 24
+   _TessMinDistance("Tessellation Min Distance", Float) = 0
+   _TessMaxDistance("Tessellation Max Distance", Float) = 35
+END_PROPERTIES
+
+BEGIN_CBUFFER
+   float _DisplacementAmount;
+   float _DisplacementMipBias;
+   float2 _DisplacementDefaultLocation;
+   float _DisplacementEdgeThickness;
+   float _TessSubdiv;
+   float _TessMinDistance;
+   float _TessMaxDistance;
+END_CBUFFER
+
+BEGIN_CODE
+
+   sampler2D _Albedo;
+   sampler2D _Normal;
+   sampler2D _Height;
+   sampler2D _Metallic;
+   sampler2D _Smoothness;
+
+   void ModifyTessellatedVertex(inout VertexData v, inout ExtraV2F d)
+   {
+		if( ( ( v.texcoord0.xy.x >= _DisplacementEdgeThickness && v.texcoord0.xy.x <= 1 - _DisplacementEdgeThickness ) ) &&
+		     ( ( v.texcoord0.xy.y >= _DisplacementEdgeThickness && v.texcoord0.xy.y <= 1 - _DisplacementEdgeThickness ) ) )
+		{
+			v.vertex.xyz = v.vertex.xyz + v.normal * tex2Dlod(_Height, float4(v.texcoord0.xy, 0, _DisplacementMipBias)).g * _DisplacementAmount;
+		}
+		else
+		{
+			v.vertex.xyz = v.vertex.xyz + v.normal * tex2Dlod(_Height, float4(_DisplacementDefaultLocation, 0, _DisplacementMipBias)).g * _DisplacementAmount;
+		}
+   }
+
+   float3 GetTessFactors ()
+   {
+      return float3(_TessMinDistance, _TessMaxDistance, _TessSubdiv);
+   }
+
+   void SurfaceFunction(inout Surface o, ShaderData d)
+   {
+      half4 c = tex2D(_Albedo, d.texcoord0.xy);
+      o.Albedo = c.rgb;
+      o.Alpha = c.a;
+      o.Normal = UnpackNormal(tex2D(_Normal, d.texcoord0.xy));
+      o.Metallic = tex2D(_Metallic, d.texcoord0.xy);
+      o.Smoothness = tex2D(_Smoothness, d.texcoord0.xy);
+   }
+
+END_CODE
+

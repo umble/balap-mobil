@@ -1,0 +1,52 @@
+﻿// this shader forms the foundation of CityGen3D tree trunk shader because it uses specular workflow, is double sided and has distance based alpha cutoff
+BEGIN_OPTIONS
+   ShaderName "CityGen3D/SpecularDoubleDev"
+   Stackable "False"
+   Workflow "Specular"
+END_OPTIONS
+
+
+BEGIN_PASS("All")
+    Cull Off // double sided
+END_PASS
+
+
+BEGIN_PROPERTIES
+   _MainTex("Albedo", 2D) = "white" {}
+   _Tint ("Tint", Color) = (1, 1, 1, 1)  
+   [Normal][NoScaleOffset]_NormalMap("Normal", 2D) = "bump" {}
+   _NormalStrength("Normal Strength", Range(0,2)) = 1
+   [NoScaleOffset]_Specular("Specular", 2D) = "black" {}
+END_PROPERTIES
+
+
+BEGIN_CBUFFER
+	half4 _Tint;
+    float4 _MainTex_ST;
+    half _NormalStrength;
+END_CBUFFER
+
+
+BEGIN_CODE
+
+   TEXTURE2D(_MainTex);
+   SAMPLER(sampler_MainTex);
+   TEXTURE2D(_NormalMap);
+   TEXTURE2D(_Specular);
+
+	void SurfaceFunction(inout Surface o, ShaderData d)
+	{
+      float2 uv = d.texcoord0.xy * _MainTex_ST.xy + _MainTex_ST.zw;
+      half4 c = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, uv);
+	  
+      o.Albedo = c.rgb * _Tint.rgb;
+      o.Height = c.a;
+      o.Normal = UnpackScaleNormal(SAMPLE_TEXTURE2D(_NormalMap, sampler_MainTex, uv), _NormalStrength);
+	  o.Alpha = c.a;
+	  
+	  o.Metallic = 0;
+      o.Specular = SAMPLE_TEXTURE2D(_Specular, sampler_MainTex, d.texcoord0.xy * _MainTex_ST.xy + _MainTex_ST.zw).rgb;
+	}
+
+END_CODE
+

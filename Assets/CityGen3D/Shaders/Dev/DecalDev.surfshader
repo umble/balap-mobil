@@ -1,0 +1,38 @@
+﻿
+BEGIN_OPTIONS
+	ShaderName "CityGen3D/DecalDev"
+	Fallback "Transparent/Cutout/VertexLit"
+    Queue "Transparent"
+    Alpha "Blend" 	
+END_OPTIONS
+
+BEGIN_PROPERTIES
+   [NoScaleOffset]_MainTex ("Albedo", 2D) = "white" {}
+   _Color ("Color", Color) = (1,1,1,1)
+   [Normal][NoScaleOffset]_BumpMap ("Normal", 2D) = "bump" {}
+   [NoScaleOffset]_Metallic("Metallic", 2D) = "black" {}
+   [NoScaleOffset]_Smoothness("Smoothness", 2D) = "black" {}
+END_PROPERTIES
+
+BEGIN_CBUFFER
+	half4 _Color;
+END_CBUFFER
+
+BEGIN_CODE
+
+   sampler2D _MainTex;
+   sampler2D _BumpMap;
+   sampler2D _Metallic;
+   sampler2D _Smoothness;
+
+   void SurfaceFunction(inout Surface o, ShaderData d)
+   {
+      half4 c = tex2D(_MainTex, d.texcoord0.xy) * _Color;
+      o.Albedo = c.rgb;
+      o.Alpha = c.a;
+      o.Normal = UnpackNormal(tex2D(_BumpMap, d.texcoord0.xy));
+      o.Metallic = tex2D(_Metallic, d.texcoord0.xy);
+      o.Smoothness = tex2D(_Smoothness, d.texcoord0.xy);
+   }
+
+END_CODE

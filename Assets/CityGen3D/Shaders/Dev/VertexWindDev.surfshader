@@ -1,0 +1,28 @@
+﻿// wind solution for CityGen3D foliage shaders
+BEGIN_OPTIONS
+    ShaderName "CityGen3D/VertexWindDev"
+END_OPTIONS
+
+BEGIN_PROPERTIES
+   _WindFrequency("Wind Frequency", Range(0,10)) = 5
+   _WindAmplitude("Wind Amplitude", Range(0,0.1)) = 0.01
+   _WindScale("Wind Scale", Range(1, 50)) = 10
+END_PROPERTIES
+
+
+BEGIN_CBUFFER
+	half _WindFrequency;
+	half _WindAmplitude;
+	half _WindScale;
+END_CBUFFER
+
+
+BEGIN_CODE
+
+	void ModifyVertex(inout VertexData v, inout ExtraV2F d)
+	{
+		v.vertex.x += sin((_Time.y + v.vertex.y * _WindScale) * _WindFrequency) * _WindAmplitude;
+	}
+
+END_CODE
+
