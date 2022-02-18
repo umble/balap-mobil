@@ -1137,7 +1137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   osmUrl: https://www.overpass-api.de/api/
   mapUrl: https://tile.openstreetmap.org/
-  source: 0
+  source: 1
   filename: New City
   origin:
     latitude: -6.905764579772949
@@ -1158,7 +1158,7 @@ MonoBehaviour:
     type: 3}
   maxWaysInRelation: 100
   recursion: 0
-  query: http://www.overpass-api.de/api/interpreter?data=(node(51.5751018983639,-0.245345455526682,51.5814979030089,-0.235053819645883);<;>;);out
+  query: https://www.overpass-api.de/api/interpreter?data=(node(-6.90666289503207,107.606661953533,-6.89796720332377,107.61542119158);rel(bn)->.x;way(-6.90666289503207,107.606661953533,-6.89796720332377,107.61542119158);node(w)->.x;rel(bw););out
     meta;
   osmFile: {fileID: 0}
   arcTolerance: 0.01
@@ -1171,7 +1171,7 @@ MonoBehaviour:
   ignoreUnfinishedData: 1
   locationMapAxisShading: {r: 0.5, g: 0.5, b: 0.5, a: 0.25}
   locationMapAreaShading: {r: 0.25, g: 0, b: 0, a: 0.25}
-  db: {fileID: 0}
+  db: {fileID: 11400000, guid: 3bab91a79e2ba3c42b758f3b4c7a29d8, type: 2}
   bingKeyValidated: 0
   edit: 0
   texturePin: {fileID: 2800000, guid: c8761582a46f5794297d8ba324628295, type: 3}
