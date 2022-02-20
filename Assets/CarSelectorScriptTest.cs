@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class CarSelectorScriptTest : MonoBehaviour
 {
     //public Scene sceneGameplay;
-    public GameObject SelectedCar;
+    //public int SelectedCar;
+    //public CarListScript TargetGameplayScene;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,10 +20,11 @@ public class CarSelectorScriptTest : MonoBehaviour
         
     }
 
-    public void SelectCar(GameObject CarObject)
+    public void SelectCar(int CarObject)
     {
-        CarObject = SelectedCar;
-        Debug.Log(CarObject.name);
-        //SceneManager.LoadScene(sceneGameplay.name);
+        //CarObject = SelectedCar;
+        PlayerPrefs.SetInt("SelectedCar", CarObject);
+        Debug.Log(CarObject);
+        SceneManager.LoadScene("Test City-noCar");
     }
 }
