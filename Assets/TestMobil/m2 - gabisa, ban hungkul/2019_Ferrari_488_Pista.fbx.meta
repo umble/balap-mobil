@@ -1,0 +1,310 @@
+fileFormatVersion: 2
+guid: ef26b8f3119605f4c8cc2123bf922453
+ModelImporter:
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      74: 4959270715867487775
+    second: wheel.Ft.L|Door.L|Scene|Scene
+  - first:
+      74: -6508631160956019823
+    second: wheel.Ft.L|Door.R|Scene|Scene
+  - first:
+      74: -5893827827807884924
+    second: wheel.Ft.L|Empty|Scene|Scene
+  - first:
+      74: 3734533503779001865
+    second: wheel.Ft.L|Engine|Scene|Scene
+  - first:
+      74: -4579865860436957251
+    second: wheel.Ft.L|jalan.001
+  - first:
+      74: 1660760100296879686
+    second: wheel.Ft.L|jalan.002
+  - first:
+      74: 7457731594757213412
+    second: wheel.Ft.L|jalan.003
+  - first:
+      74: -4431124760089937073
+    second: wheel.Ft.L|jalan.004
+  - first:
+      74: -3749724354223849688
+    second: wheel.Ft.L|MOBIL JALAN.003
+  - first:
+      74: -5763232124430413041
+    second: wheel.Ft.L|Trunk.001|Scene|Scene
+  - first:
+      74: 8498054304691132440
+    second: wheel.Ft.L|jalan
+  - first:
+      74: -5737962003109743731
+    second: wheel.Ft.L|MOBIL JALAN.001
+  - first:
+      74: 4282284634396125206
+    second: wheel.Ft.L|MOBIL JALAN.002
+  - first:
+      74: 7412314116818696865
+    second: wheel.Ft.L|MOBIL JALAN
+  - first:
+      74: 7912314572533159497
+    second: wheel.Ft.R|Door.L|Scene|Scene
+  - first:
+      74: -7075945385412679964
+    second: wheel.Ft.R|Door.R|Scene|Scene
+  - first:
+      74: -1167696427411029112
+    second: wheel.Ft.R|Empty|Scene|Scene
+  - first:
+      74: 987583174651215617
+    second: wheel.Ft.R|Engine|Scene|Scene
+  - first:
+      74: 4674606945109030930
+    second: wheel.Ft.R|jalan.001
+  - first:
+      74: -8565176449750018715
+    second: wheel.Ft.R|jalan.002
+  - first:
+      74: -4033363035332200709
+    second: wheel.Ft.R|jalan.003
+  - first:
+      74: 7539022585951027959
+    second: wheel.Ft.R|jalan.004
+  - first:
+      74: -3798121750388433947
+    second: wheel.Ft.R|MOBIL JALAN.003
+  - first:
+      74: -7090331778769232168
+    second: wheel.Ft.R|Trunk.001|Scene|Scene
+  - first:
+      74: -2986954975018462710
+    second: wheel.Ft.R|jalan
+  - first:
+      74: 7203249296310048551
+    second: wheel.Ft.R|MOBIL JALAN.001
+  - first:
+      74: -8363581274503374174
+    second: wheel.Ft.R|MOBIL JALAN.002
+  - first:
+      74: -3725892625830444816
+    second: wheel.Ft.R|MOBIL JALAN
+  - first:
+      74: -7922437384735717328
+    second: wheel.Bk.R|Door.L|Scene|Scene
+  - first:
+      74: 892219095989014988
+    second: wheel.Bk.R|Door.R|Scene|Scene
+  - first:
+      74: -1058547367368291131
+    second: wheel.Bk.R|Empty|Scene|Scene
+  - first:
+      74: 3858115101546182444
+    second: wheel.Bk.R|Engine|Scene|Scene
+  - first:
+      74: 5685846932123891906
+    second: wheel.Bk.R|jalan.001
+  - first:
+      74: 6701124605203824326
+    second: wheel.Bk.R|jalan.002
+  - first:
+      74: -2951221288246531880
+    second: wheel.Bk.R|jalan.003
+  - first:
+      74: -4094064403041933106
+    second: wheel.Bk.R|jalan.004
+  - first:
+      74: 5719351035308949351
+    second: wheel.Bk.R|MOBIL JALAN.003
+  - first:
+      74: -309490171109619961
+    second: wheel.Bk.R|Trunk.001|Scene|Scene
+  - first:
+      74: -5178689027666534371
+    second: wheel.Bk.R|jalan
+  - first:
+      74: -6589044125028378080
+    second: wheel.Bk.R|MOBIL JALAN.001
+  - first:
+      74: -7011389861814464472
+    second: wheel.Bk.R|MOBIL JALAN.002
+  - first:
+      74: 5136823988029084365
+    second: wheel.Bk.R|MOBIL JALAN
+  - first:
+      74: -2965743284352847320
+    second: wheel.Bk.L|Door.L|Scene|Scene
+  - first:
+      74: 1399226728952869742
+    second: wheel.Bk.L|Door.R|Scene|Scene
+  - first:
+      74: -6162474465983860765
+    second: wheel.Bk.L|Empty|Scene|Scene
+  - first:
+      74: 6801365186022572751
+    second: wheel.Bk.L|Engine|Scene|Scene
+  - first:
+      74: -7226361366732113033
+    second: wheel.Bk.L|jalan.001
+  - first:
+      74: 8654600446115693621
+    second: wheel.Bk.L|jalan.002
+  - first:
+      74: 3974293702828481093
+    second: wheel.Bk.L|jalan.003
+  - first:
+      74: -4253916123229825273
+    second: wheel.Bk.L|jalan.004
+  - first:
+      74: -5131239528125612676
+    second: wheel.Bk.L|MOBIL JALAN.003
+  - first:
+      74: -5652616461174688097
+    second: wheel.Bk.L|Trunk.001|Scene|Scene
+  - first:
+      74: 2067459178782668905
+    second: wheel.Bk.L|jalan
+  - first:
+      74: -7450853489027702553
+    second: wheel.Bk.L|MOBIL JALAN.001
+  - first:
+      74: -365618127372658581
+    second: wheel.Bk.L|MOBIL JALAN.002
+  - first:
+      74: -3655452361233686238
+    second: wheel.Bk.L|MOBIL JALAN
+  - first:
+      74: 4151211630412755249
+    second: rig mobil|ArmatureAction
+  - first:
+      74: 3170715194232698286
+    second: rig mobil|Door.L|Scene|Scene
+  - first:
+      74: -5315098235171285461
+    second: rig mobil|Door.R|Scene|Scene
+  - first:
+      74: -551709688401837300
+    second: rig mobil|Empty|Scene|Scene
+  - first:
+      74: -4223287999570729181
+    second: rig mobil|Engine|Scene|Scene
+  - first:
+      74: 3440150575302324463
+    second: rig mobil|jalan.001
+  - first:
+      74: 5903016814529555872
+    second: rig mobil|jalan.002
+  - first:
+      74: -4244755265908354758
+    second: rig mobil|jalan.003
+  - first:
+      74: -5810475999333633923
+    second: rig mobil|jalan.004
+  - first:
+      74: -5821392732416463679
+    second: rig mobil|MOBIL JALAN.003
+  - first:
+      74: 7576369603943277159
+    second: rig mobil|Trunk.001|Scene|Scene
+  - first:
+      74: -8642301826848248048
+    second: rig mobil|jalan
+  - first:
+      74: 5670886583170445513
+    second: rig mobil|MOBIL JALAN.001
+  - first:
+      74: -437528852600009437
+    second: rig mobil|MOBIL JALAN.002
+  - first:
+      74: 5154938336946580308
+    second: rig mobil|MOBIL JALAN
+  externalObjects: {}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,172 @@
+fileFormatVersion: 2
+guid: 307c2d62286493d4386118216950c168
+ModelImporter:
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      74: -1825089725396640308
+    second: wheel_frontpass|car_body_mesh|Take 001|BaseLayer
+  - first:
+      74: 939578742234476043
+    second: wheel_frontpass|Car|Take 001|BaseLayer
+  - first:
+      74: -4745973446508020058
+    second: wheel_frontpass|wheel_frontdriver|Take 001|BaseLayer
+  - first:
+      74: -3913127457928258376
+    second: wheel_frontpass|wheel_frontpass|Take 001|BaseLayer
+  - first:
+      74: -6341244261895007711
+    second: wheel_frontpass|wheel_reardriver|Take 001|BaseLayer
+  - first:
+      74: -5976824647415901183
+    second: wheel_frontpass|wheel_rearpass|Take 001|BaseLayer
+  - first:
+      74: -8053207072606062130
+    second: wheel_rearpass|car_body_mesh|Take 001|BaseLayer
+  - first:
+      74: 739455019045136215
+    second: wheel_rearpass|Car|Take 001|BaseLayer
+  - first:
+      74: -7056758068148164836
+    second: wheel_rearpass|wheel_frontdriver|Take 001|BaseLayer
+  - first:
+      74: 8454443797555138705
+    second: wheel_rearpass|wheel_frontpass|Take 001|BaseLayer
+  - first:
+      74: -8450042266606447342
+    second: wheel_rearpass|wheel_reardriver|Take 001|BaseLayer
+  - first:
+      74: 4511518014192406088
+    second: wheel_rearpass|wheel_rearpass|Take 001|BaseLayer
+  - first:
+      74: 7796769808105996685
+    second: car_body_mesh|car_body_mesh|Take 001|BaseLayer
+  - first:
+      74: 662336686769573407
+    second: car_body_mesh|Car|Take 001|BaseLayer
+  - first:
+      74: 1306807056880192732
+    second: car_body_mesh|wheel_frontdriver|Take 001|BaseLayer
+  - first:
+      74: 7799140820742766231
+    second: car_body_mesh|wheel_frontpass|Take 001|BaseLayer
+  - first:
+      74: -5978883787423891375
+    second: car_body_mesh|wheel_reardriver|Take 001|BaseLayer
+  - first:
+      74: -6595422255433179464
+    second: car_body_mesh|wheel_rearpass|Take 001|BaseLayer
+  - first:
+      74: 1305180942486246185
+    second: rig mobil|car_body_mesh|Take 001|BaseLayer
+  - first:
+      74: -7013187207229858732
+    second: rig mobil|Car|Take 001|BaseLayer
+  - first:
+      74: 8273684146769094858
+    second: rig mobil|rig mobilAction
+  - first:
+      74: 3029087972681447276
+    second: rig mobil|wheel_frontdriver|Take 001|BaseLayer
+  - first:
+      74: 2776488438430543749
+    second: rig mobil|wheel_frontpass|Take 001|BaseLayer
+  - first:
+      74: 8882707707959365248
+    second: rig mobil|wheel_reardriver|Take 001|BaseLayer
+  - first:
+      74: -914482144613147403
+    second: rig mobil|wheel_rearpass|Take 001|BaseLayer
+  externalObjects: {}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
