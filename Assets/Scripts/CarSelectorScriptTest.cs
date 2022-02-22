@@ -11,13 +11,13 @@ public class CarSelectorScriptTest : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void SelectCar(int CarObject)
@@ -25,6 +25,6 @@ public class CarSelectorScriptTest : MonoBehaviour
         //CarObject = SelectedCar;
         PlayerPrefs.SetInt("SelectedCar", CarObject);
         Debug.Log(CarObject);
-        SceneManager.LoadScene("Test City-noCar");
+        SceneManager.LoadScene("TestWaypointSelect");
     }
 }
